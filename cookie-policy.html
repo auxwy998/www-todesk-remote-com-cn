@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie政策 - ToDesk远程控制</title>
+    <meta name="description" content="ToDesk Cookie使用政策，了解我们如何使用Cookie和类似技术提升您的浏览体验。">
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <meta name="theme-color" content="#064e3b">
+    <style>
+        :root {
+            --primary: #064e3b;
+            --secondary: #065f46;
+            --accent: #10B981;
+            --accent-light: #2DD4BF;
+            --bg-light: #f0fdf4;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 12px;
+            --radius-lg: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            background: var(--bg-light);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-back {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-back:hover {
+            color: var(--accent-light);
+        }
+
+        /* Content */
+        .policy-content {
+            padding: 60px 0;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .policy-header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .policy-header .last-updated {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .policy-section {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .policy-section h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .policy-section h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin: 24px 0 12px;
+        }
+
+        .policy-section p {
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        .policy-section ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+
+        .policy-section li {
+            margin-bottom: 10px;
+            color: var(--text-dark);
+            font-size: 15px;
+        }
+
+        .highlight-box {
+            background: var(--bg-light);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        .cookie-table th,
+        .cookie-table td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+        }
+
+        .cookie-table th {
+            background: var(--bg-light);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .cookie-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 40px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-logo svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        .footer-logo span {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-light);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .policy-header h1 {
+                font-size: 28px;
+            }
+
+            .policy-section {
+                padding: 28px 20px;
+            }
+
+            .cookie-table {
+                font-size: 12px;
+            }
+
+            .cookie-table th,
+            .cookie-table td {
+                padding: 10px 12px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#10B981"/>
+                                <stop offset="100%" style="stop-color:#2DD4BF"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="45" fill="url(#logoGrad)"/>
+                        <path d="M30 50 L45 65 L70 35" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="logo-text">ToDesk</span>
+                </a>
+                <a href="index.html" class="nav-back">← 返回首页</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="policy-content">
+        <div class="container">
+            <div class="policy-header">
+                <h1>Cookie政策</h1>
+                <p class="last-updated">最后更新日期：2024年1月1日</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>什么是Cookie</h2>
+                <p>Cookie是一种小型文本文件，当您访问网站时，这些文件会被存储在您的设备（电脑、平板或手机）上。Cookie帮助网站记住您的偏好设置、登录状态，并分析您如何使用我们的网站，从而改善您的用户体验。</p>
+                <p>除Cookie外，我们还可能使用类似的追踪技术，如LocalStorage（本地存储）、SessionStorage（会话存储）、像素标签（Pixel Tags）等。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>我们使用的Cookie类型</h2>
+                
+                <h3>1. 必要Cookie</h3>
+                <p>这些Cookie对于网站的基本功能运行至关重要，缺一不可。它们使您能够浏览网站并使用其核心功能，如访问安全区域、购物车结账等。</p>
+                <table class="cookie-table">
+                    <thead>
+                        <tr>
+                            <th>Cookie名称</th>
+                            <th>用途</th>
+                            <th>有效期</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>session_id</td>
+                            <td>维持您的登录状态和会话</td>
+                            <td>会话结束</td>
+                        </tr>
+                        <tr>
+                            <td>device_token</td>
+                            <td>记住已注册设备，简化登录流程</td>
+                            <td>30天</td>
+                        </tr>
+                        <tr>
+                            <td>security_token</td>
+                            <td>安全验证，防止CSRF攻击</td>
+                            <td>会话结束</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>2. 功能性Cookie</h3>
+                <p>这些Cookie帮助我们记住您的偏好设置，为您提供更个性化的体验。</p>
+                <table class="cookie-table">
+                    <thead>
+                        <tr>
+                            <th>Cookie名称</th>
+                            <th>用途</th>
+                            <th>有效期</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>language</td>
+                            <td>记住您的语言偏好</td>
+                            <td>1年</td>
+                        </tr>
+                        <tr>
+                            <td>theme</td>
+                            <td>记住您的主题偏好（亮色/暗色）</td>
+                            <td>1年</td>
+                        </tr>
+                        <tr>
+                            <td>video_quality</td>
+                            <td>记住您的画质设置</td>
+                            <td>6个月</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>3. 分析Cookie</h3>
+                <p>这些Cookie帮助我们了解访客如何与我们的网站互动，以便我们持续优化用户体验。</p>
+                <table class="cookie-table">
+                    <thead>
+                        <tr>
+                            <th>Cookie来源</th>
+                            <th>用途</th>
+                            <th>有效期</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google Analytics</td>
+                            <td>分析网站访问量、用户行为和流量来源</td>
+                            <td>2年</td>
+                        </tr>
+                        <tr>
+                            <td>51.la统计</td>
+                            <td>网站流量统计和用户访问分析</td>
+                            <td>1年</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>4. 营销Cookie</h3>
+                <p>我们网站当前不主动使用营销Cookie用于追踪跨网站用户行为。如需了解第三方营销平台如何使用Cookie，请参阅相关平台的隐私政策。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>第三方Cookie</h2>
+                <p>我们的网站可能包含来自第三方的Cookie，这些第三方服务可能出于其自身目的设置Cookie：</p>
+                <ul>
+                    <li><strong>分析服务：</strong>如Google Analytics、51.la，帮助我们了解网站使用情况</li>
+                    <li><strong>社交分享：</strong>如微信、微博分享功能，可能设置相关Cookie</li>
+                    <li><strong>支付服务：</strong>如您在付费时使用第三方支付，相关支付平台可能设置Cookie</li>
+                </ul>
+                <p>我们建议您查看这些第三方网站的Cookie政策，了解他们如何收集和使用您的信息。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>如何管理Cookie</h2>
+                <p>您有权选择接受或拒绝Cookie。以下是几种管理Cookie的方式：</p>
+
+                <h3>浏览器设置</h3>
+                <p>大多数浏览器允许您通过设置来控制Cookie：</p>
+                <ul>
+                    <li>允许所有Cookie</li>
+                    <li>阻止所有Cookie</li>
+                    <li>在Cookie被写入前提示您</li>
+                    <li>删除已存在的所有Cookie</li>
+                </ul>
+                <p>各浏览器设置方法略有不同，以下是常见浏览器的设置位置：</p>
+                <ul>
+                    <li>Chrome：设置 → 隐私和安全 → Cookie和其他网站数据</li>
+                    <li>Firefox：选项 → 隐私与安全 → Cookie和网站数据</li>
+                    <li>Safari：偏好设置 → 隐私 → Cookie和网站数据</li>
+                    <li>Edge：设置 → Cookie和网站权限 → 管理和删除Cookie</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p><strong>请注意：</strong>如果您选择拒绝Cookie，网站的某些功能可能无法正常使用。例如，您可能需要每次访问时重新登录，或无法保存个性化设置。</p>
+                </div>
+
+                <h3>退出在线分析</h3>
+                <p>如您不希望Google Analytics收集您的信息，可安装<a href="https://tools.google.com/dlpage/gaoptout" style="color: var(--accent);">Google Analytics Opt-out Browser Add-on</a>或访问51.la的退出页面。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>LocalStorage和SessionStorage</h2>
+                <p>除Cookie外，我们还使用Web Storage技术：</p>
+                <ul>
+                    <li><strong>LocalStorage：</strong>存储在本地，永久有效，直至您手动清除或清除浏览器数据</li>
+                    <li><strong>SessionStorage：</strong>存储在会话中，关闭浏览器后自动清除</li>
+                </ul>
+                <p>这些技术用于存储更大量的数据，提升网站性能。例如，缓存用户配置、连接历史记录等。</p>
+                <p>您可以通过浏览器设置清除这些数据：开发者工具 → Application → Storage → Clear storage</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>像素标签</h2>
+                <p>我们的网站可能使用像素标签（也称网络信标、透明GIF）。这些小型图形文件帮助我们：</p>
+                <ul>
+                    <li>统计网站访问量</li>
+                    <li>了解邮件营销效果</li>
+                    <li>判断邮件是否被打开</li>
+                </ul>
+                <p>这些标签不存储个人信息，仅用于统计和分析目的。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>政策更新</h2>
+                <p>我们可能会不时更新本Cookie政策。更新后的政策将在本页面上公布，并更新"最后更新日期"。</p>
+                <p>我们建议您定期查阅本页面，以了解最新的Cookie使用情况。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>联系我们</h2>
+                <p>如果您对本Cookie政策有任何疑问或意见，请通过以下方式联系我们：</p>
+                <ul>
+                    <li>电子邮件：privacy@todesk.com</li>
+                    <li>客服热线：400-888-8888</li>
+                    <li>联系地址：广东省深圳市南山区科技中一路XX号</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#10B981"/>
+                                <stop offset="100%" style="stop-color:#2DD4BF"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="45" fill="url(#footerLogoGrad)"/>
+                        <path d="M30 50 L45 65 L70 35" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>ToDesk</span>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="https://www.todesk.com/download.html">下载</a></li>
+                    <li><a href="privacy-policy.html">隐私政策</a></li>
+                    <li><a href="user-agreement.html">用户协议</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 ToDesk. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户协议 - ToDesk远程控制</title>
+    <meta name="description" content="ToDesk用户服务协议，详细说明您与ToDesk之间的权利义务关系。">
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <meta name="theme-color" content="#064e3b">
+    <style>
+        :root {
+            --primary: #064e3b;
+            --secondary: #065f46;
+            --accent: #10B981;
+            --accent-light: #2DD4BF;
+            --bg-light: #f0fdf4;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 12px;
+            --radius-lg: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            background: var(--bg-light);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-back {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-back:hover {
+            color: var(--accent-light);
+        }
+
+        /* Content */
+        .policy-content {
+            padding: 60px 0;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .policy-header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .policy-header .last-updated {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .policy-section {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .policy-section h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .policy-section h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin: 24px 0 12px;
+        }
+
+        .policy-section p {
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        .policy-section ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+
+        .policy-section li {
+            margin-bottom: 10px;
+            color: var(--text-dark);
+            font-size: 15px;
+        }
+
+        .highlight-box {
+            background: var(--bg-light);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 40px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-logo svg {
+            width: 36px;
+            height: 36px;
+        }
+
+        .footer-logo span {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-light);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .policy-header h1 {
+                font-size: 28px;
+            }
+
+            .policy-section {
+                padding: 28px 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#10B981"/>
+                                <stop offset="100%" style="stop-color:#2DD4BF"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="45" fill="url(#logoGrad)"/>
+                        <path d="M30 50 L45 65 L70 35" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="logo-text">ToDesk</span>
+                </a>
+                <a href="index.html" class="nav-back">← 返回首页</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="policy-content">
+        <div class="container">
+            <div class="policy-header">
+                <h1>用户服务协议</h1>
+                <p class="last-updated">最后更新日期：2024年1月1日</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>重要提示</h2>
+                <p>欢迎使用ToDesk远程控制软件（以下简称"ToDesk"、"本软件"或"服务"）。在您开始使用ToDesk服务之前，请仔细阅读本协议的全部内容。</p>
+                <p><strong>请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款，以及开通或使用某项服务的单独协议。</strong>如果您不同意本协议的任何内容，请不要注册、登录或使用ToDesk服务。您通过网络页面点击确认或以其他方式选择接受本协议，即表示您与ToDesk已达成协议，同意接受本协议的全部约定内容。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>服务内容</h2>
+                <p>ToDesk向用户提供以下服务：</p>
+                <ul>
+                    <li>设备间的远程桌面连接与控制</li>
+                    <li>文件传输与剪贴板同步</li>
+                    <li>远程音频传输</li>
+                    <li>屏幕录制与截图</li>
+                    <li>移动设备远程控制</li>
+                    <li>设备管理与批量运维（企业版）</li>
+                </ul>
+                <p>我们保留随时变更、中断或终止部分或全部服务的权利，并会尽合理努力提前通知您。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>账号注册与使用</h2>
+                
+                <h3>1. 账号注册</h3>
+                <p>您在使用ToDesk服务前无需注册账号，直接下载安装即可使用基础功能。如需使用高级功能，您需要注册并登录ToDesk账号。</p>
+                <p>您应当妥善保管账号信息，因您保管不善造成的损失由您自行承担。</p>
+
+                <h3>2. 账号安全</h3>
+                <p>您承诺并同意：</p>
+                <ul>
+                    <li>不得以任何方式转让、出借、出租、授权他人使用您的账号</li>
+                    <li>发现账号被盗用时应立即通知我们</li>
+                    <li>对账号安全负责，因您个人原因导致的损失由您承担</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>使用规范</h2>
+                <p>在使用ToDesk服务时，您承诺并同意遵守以下规定：</p>
+                
+                <h3>您不得：</h3>
+                <ul>
+                    <li>利用ToDesk服务从事任何违法犯罪活动</li>
+                    <li>未经授权访问、干扰他人的计算机系统</li>
+                    <li>侵犯他人隐私、知识产权或其他合法权益</li>
+                    <li>传播计算机病毒、恶意代码等有害程序</li>
+                    <li>对远程控制过程进行未授权的录制、传播</li>
+                    <li>利用服务进行任何商业牟利行为（企业用户需获得授权）</li>
+                    <li>试图破解、反编译或修改ToDesk软件</li>
+                    <li>使用自动化工具批量注册账号或获取连接资源</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p><strong>特别提示：</strong>远程控制行为应当获得被控端设备所有者的明确授权。未经授权的远程访问可能违反相关法律法规，您须对此承担全部法律责任。</p>
+                </div>
+
+                <h3>被控端用户须知</h3>
+                <p>作为被控端用户，您有权：</p>
+                <ul>
+                    <li>随时终止正在进行的远程控制会话</li>
+                    <li>查看连接记录和文件传输日志</li>
+                    <li>设置访问密码保护您的设备</li>
+                    <li>拒绝来自特定设备或账号的连接请求</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>服务费用</h2>
+                <p>ToDesk基础功能对个人用户免费提供。企业用户如需使用高级功能，可选择付费升级至专业版或企业版。</p>
+                <p>付费服务的价格、付款方式等信息将在相关页面明确展示。所有费用均为含税价，如需发票请与客服联系。</p>
+                
+                <h3>退款政策</h3>
+                <p>付费服务一经开通，如因用户自身原因需要退款的，在开通后7天内可申请全额退款；超过7天的，不予退款但可转让服务。具体规则请参阅退款页面说明。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>知识产权</h2>
+                <p>ToDesk的所有权利，包括但不限于软件版权、商标权、专利权、商业秘密等，均归ToDesk或其许可方所有。</p>
+                <p>您在使用ToDesk服务过程中产生的任何内容（包括但不限于文字、图片、音频、视频），其知识产权归您所有，但您授予我们全球范围内免费、非独占的使用权，用于提供服务及改进产品。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>隐私保护</h2>
+                <p>我们重视您的隐私保护，远程控制过程中的所有数据传输均采用端到端加密。具体隐私保护措施请参阅我们的《隐私政策》。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>免责声明</h2>
+                <p>在适用法律允许的最大范围内，ToDesk不对以下情况承担责任：</p>
+                <ul>
+                    <li>因不可抗力、意外事件导致的损失</li>
+                    <li>因网络运营商故障、网络延迟导致的服务中断</li>
+                    <li>因用户操作不当或第三方原因造成的损失</li>
+                    <li>用户在使用远程控制过程中从事违法活动</li>
+                    <li>因被控端设备性能不足、网络环境不佳导致的体验问题</li>
+                </ul>
+                <p>我们不对服务提供任何明示或默示的保证，包括但不限于适销性、特定用途适用性等保证。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>服务变更与终止</h2>
+                <p>我们保留随时修改、暂停或终止服务的权利。对于重大变更，我们会提前通知您。如服务终止，我们将按照您已支付的费用比例退还剩余费用。</p>
+                <p>您理解并同意，我们有权基于合理理由（包括但不限于违反法律法规、本协议、危害网络安全等）单方面终止向您提供服务，且无需承担违约责任。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>协议修改</h2>
+                <p>我们可能会不时修改本协议条款。修改后的协议一旦公布即生效。如果您不同意修改后的协议，有权停止使用服务。如果您继续使用服务，则视为您已接受修改后的协议。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>争议解决</h2>
+                <p>本协议的订立、执行和解释均适用中华人民共和国法律。</p>
+                <p>如双方发生争议，应首先通过友好协商解决；协商不成的，任一方可向被告住所地有管辖权的人民法院提起诉讼。</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>联系我们</h2>
+                <p>如您对本协议有任何疑问，请通过以下方式联系我们：</p>
+                <ul>
+                    <li>电子邮件：legal@todesk.com</li>
+                    <li>客服热线：400-888-8888</li>
+                    <li>联系地址：广东省深圳市南山区科技中一路XX号</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#10B981"/>
+                                <stop offset="100%" style="stop-color:#2DD4BF"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="45" fill="url(#footerLogoGrad)"/>
+                        <path d="M30 50 L45 65 L70 35" stroke="white" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>ToDesk</span>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="https://www.todesk.com/download.html">下载</a></li>
+                    <li><a href="privacy-policy.html">隐私政策</a></li>
+                    <li><a href="cookie-policy.html">Cookie政策</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 ToDesk. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
